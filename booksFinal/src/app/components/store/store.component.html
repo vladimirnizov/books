@@ -1,0 +1,7 @@
+<div class="container">
+<h1>Herolo Books</h1>
+<button (click)="add()" mat-raised-button	 matTooltip="New book">add new book</button>
+</div>
+<div class="myDiv">
+<app-display-book [books]="books" (del)="del(book)"></app-display-book>
+</div>

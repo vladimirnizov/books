@@ -1,0 +1,21 @@
+<form [formGroup] = "form">
+  <mat-form-field>
+    <input type="text" matInput formControlName="title" placeholder="Give a new Title:">
+    <mat-error>{{wrongFormat('title')}}</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input type="text" matInput formControlName="author" placeholder="Change Author:">
+    <mat-error>{{wrongFormat('author')}}</mat-error>
+  </mat-form-field><br>
+  <mat-form-field>
+    <input matInput [max]="max" [matDatepicker]="datepicker" formControlName="date">
+    <mat-error>{{wrongFormat('date')}}</mat-error>
+    <mat-datepicker-toggle [for]="datepicker"></mat-datepicker-toggle>
+    <mat-datepicker #datepicker></mat-datepicker>
+  </mat-form-field>
+  <div>
+  <button mat-button mat-dialog-close color="primary">Cancel</button>
+  <button [disabled]="form.invalid" mat-button (click)="save()" color="primary">Save</button>
+  </div>
+</form>

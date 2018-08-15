@@ -1,0 +1,24 @@
+
+
+.myDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 90%;
+    overflow: auto;
+  }
+  h1{
+    font-family: fantasy;
+    text-align: center;
+    margin-block-end: 100px
+  }
+
+  button{
+    width: 150px;
+    position: fixed;
+    left: 10vw;
+    top: 10vh;
+    outline: none;
+  }
+ 
+  
